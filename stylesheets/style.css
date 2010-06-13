@@ -1,0 +1,34 @@
+body {
+    background-color: #000000;
+}
+
+#wrapper {
+    margin: 100px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Inconsolata', arial, serif;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 150px;
+    color: #f4f6f7;
+}
+
+#links {
+    font-family: 'Molengo', arial, serif;
+    font-weight: bold;
+    color: #f4f6f7;
+}
+
+#links a {
+    padding: 5px 10px;
+    color: #f4f6f7;
+    text-decoration: none;
+}
+
+#links a:hover {
+    background-color: #f4f6f7;
+    color: #000000;
+}
