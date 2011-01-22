@@ -17,9 +17,23 @@ h1 {
 }
 
 #links {
+    padding: 1%;
     font-family: 'Molengo', arial, serif;
     font-weight: bold;
     color: #f4f6f7;
+}
+
+#links.big {
+    font-size: 150%;
+}
+
+#links.small {
+    font-size: 95%;
+    font-weight: normal;
+}
+
+#links.main {
+    font-weight: 400%;
 }
 
 #links a {
