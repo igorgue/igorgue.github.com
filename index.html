@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<head>
+  <head>
     <meta http-equiv="content-type" charset=utf-8">
     <title>igorgue</title>
 
@@ -9,42 +9,99 @@
     <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css' />
 
-</head>
-<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+      // Random tagline stuff
+      var taglines = [
+        "My girlfriend is dead and my cat committed suicide.",
+        "Highly combustible stuff.",
+        "Yo dawg... yeh that's it.",
+        "Of course my employer doesn't think for me... nigga plz, everything written here does not express my employer position on anything.",
+        "You're breakin' my balls! -- Eric Cartman.",
+        "I'll think of more later... I come out with this weird lines all the time.",
+        "The one's so stupid it underflows and becomes awesome!",
+        "Your awesome tagline here."
+      ];
+
+      // Yes, I know you can do this with just one var, I suck at programming!!!! and I like redeable shit.
+      var current = null;
+      var next = null;
+
+      // Picking the random stuff
+      function changeFooterText() {
+        // Setting current to next
+        if (!next) {
+          next = Math.floor(Math.random() * taglines.length);
+        }
+
+        // Your current is now next!
+        current = next;
+
+        // And changing its text
+        $("#footer_text").fadeOut('slow', function() {
+          $("#footer_text").text(taglines[current]).fadeIn('slow');
+        });
+
+        // Updating next, until it's different than current
+        while (current == next) {
+          next = Math.floor(Math.random() * taglines.length);
+        }
+
+        // Every 1 minute
+        var seconds = 3;
+        setTimeout("changeFooterText()", seconds * 1000);
+      }
+
+      // Running the function every 1 min
+      $(document).ready(function() {
+        // Running
+        changeFooterText();
+      });
+    </script>
+
+  </head>
+  <body>
     <div id="wrapper">
-        <header>
-            <h1>igorgue</h1>
-        </header>
-        <nav id="links" class="big">
-            <a href="https://github.com/igorgue" title="codes">Github</a>
-            |
-            <a href="http://igordevlog.blogspot.com" title="blag">Blog</a>
-        </nav>
-        <nav id="links" class="small">
-            <a title="startup (R.I.P.)">APPush</a>
-            |
-            <a href="http://twitter.com/igorgue" title="thoughts">Twitter</a>
-            |
-            <a href="http://facebook.com/igorgue" title="drama">Facebook</a>
-            |
-            <a href="http://last.fm/user/igorgue" title="music">Last.fm</a>
-            |
-            <a href="http://www.google.com/reader/shared/igfgt1" title="shares">Reader</a>
-            |
-            <a href="http://stackoverflow.com/users/29253/igorgue" title="whut? and cause'">StackOverflow</a>
-            |
-            <a href="https://bitbucket.org/igor" title="moar codes">Bitbucket</a>
-            |
-            <a href="http://mightbetoolate.tumblr.com" title="another blag">Blag</a>
-            |
-            <a href="http://bestwebsiteevar.com" title="another blag">BWE</a>
-        </nav>
+      <header>
+      <h1>igorgue</h1>
+      </header>
+      <nav id="links" class="big">
+        <a href="http://pappoproject.org/">Pappo</a>
+        |
+        <a href="http://madeinsouthflorida.com" title="Made in South Florida">Made in South Florida</a>
+        |
+        <a href="https://github.com/igorgue" title="codes">Github</a>
+        |
+        <a href="http://igordevlog.blogspot.com" title="blag">Blog</a>
+      </nav>
+      <nav id="links" class="small">
+        <a href="http://twitter.com/igorgue" title="thoughts">Twitter</a>
+        |
+        <a href="http://facebook.com/igorgue" title="drama">Facebook</a>
+        |
+        <a href="http://last.fm/user/igorgue" title="music">Last.fm</a>
+        |
+        <a href="http://www.google.com/reader/shared/igfgt1" title="shares">Reader</a>
+        |
+        <a href="http://stackoverflow.com/users/29253/igorgue" title="whut? and cause'">StackOverflow</a>
+        |
+        <a href="https://bitbucket.org/igor" title="moar codes">Bitbucket</a>
+        |
+        <a href="http://mightbetoolate.tumblr.com" title="another blag">Blag</a>
+        |
+        <a href="http://bestwebsiteevar.com" title="another blag">BWE</a>
+      </nav>
+    </div>
+
+    <div id="footer">
+      <p id="footer_text"></p>
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
     <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</body>
+  </body>
 </html>

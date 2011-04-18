@@ -1,5 +1,20 @@
+* html body {
+    overflow:hidden;
+}
+
 body {
     background-color: #000000;
+}
+
+@media screen {
+    body>div#footer{
+        position: fixed;
+    }
+}
+
+* html div#content {
+    height:100%;
+    overflow:auto;
 }
 
 #wrapper {
@@ -24,7 +39,7 @@ h1 {
 }
 
 #links.big {
-    font-size: 150%;
+    font-size: 140%;
 }
 
 #links.small {
@@ -45,4 +60,17 @@ h1 {
 #links a:hover {
     background-color: #f4f6f7;
     color: #000000;
+}
+
+#footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+#footer p {
+    font-family: 'Molengo', arial, serif;
+    text-align: center;
+    color: #f4f6f7;
 }
