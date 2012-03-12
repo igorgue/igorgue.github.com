@@ -31,33 +31,33 @@ h1 {
     color: #f4f6f7;
 }
 
-#links {
+.links {
     padding: 1%;
     font-family: 'Molengo', arial, serif;
     font-weight: bold;
     color: #f4f6f7;
 }
 
-#links.big {
+.links.big {
     font-size: 140%;
 }
 
-#links.small {
+.links.small {
     font-size: 95%;
     font-weight: normal;
 }
 
-#links.main {
+.links.main {
     font-weight: 400%;
 }
 
-#links a {
+.links a {
     padding: 5px 10px;
     color: #f4f6f7;
     text-decoration: none;
 }
 
-#links a:hover {
+.links a:hover {
     background-color: #f4f6f7;
     color: #000000;
 }

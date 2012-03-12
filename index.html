@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <meta http-equiv="content-type" charset=utf-8">
+    <meta http-equiv="content-type" charset="utf-8">
     <title>igorgue</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -9,6 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css' />
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 
     <script type="text/javascript" charset="utf-8">
@@ -17,9 +18,9 @@
         "My girlfriend is dead and my cat committed suicide.",
         "Highly combustible stuff.",
         "Yo dawg... yeh that's it.",
-        "Of course my employer doesn't think for me... nigga plz, everything written here does not express my employer position on anything.",
+        "Of course my employer doesn't think for me... plz, everything written here does not express my employer position on anything.",
         "You're breakin' my balls! -- Eric Cartman.",
-        "I'll think of more later... I come out with this weird lines all the time.",
+        "I come out with these weird one-liners all the time.",
         "The one's so stupid it underflows and becomes awesome!",
         "Your awesome tagline here."
       ];
@@ -48,36 +49,41 @@
           next = Math.floor(Math.random() * taglines.length);
         }
 
-        // Every 1 minute
-        var seconds = 3;
-        setTimeout("changeFooterText()", seconds * 1000);
+        // Every 8 seconds
+        var seconds = 8000;
+        setTimeout("changeFooterText()", seconds);
       }
 
-      // Running the function every 1 min
+      // Running the function every 8 seconds
       $(document).ready(function() {
         // Running
         changeFooterText();
       });
     </script>
-
   </head>
   <body>
     <div id="wrapper">
       <header>
       <h1>igorgue</h1>
       </header>
-      <nav id="links" class="big">
+      <nav class="links big">
         <a href="http://freqent.com/" title="Rewards for everyone">Freqent</a>
         |
         <a href="http://pappoproject.org/" title="My Haskell Webframework">Pappo</a>
-        |
-        <a href="http://madeinsouthflorida.com" title="Made in South Florida">Made in South Florida</a>
         |
         <a href="https://github.com/igorgue" title="codes">Github</a>
         |
         <a href="http://igordevlog.blogspot.com" title="blag">Blog</a>
       </nav>
-      <nav id="links" class="small">
+      <nav class="links big">
+        Presentations:
+        <a href="http://igorgue.com/presentations/asnakelearns.pdf" title="A Snake Learns (ML In Python) - 2011 PySoFlo">A Snake Learns</a>
+        |
+        <a href="http://igorgue.com/presentations/howtohaskell.pdf" title="How To Haskell - 2011 Hack n Tell">How To Haskell</a>
+        |
+        <a href="http://igorgue.com/presentations/wsgi-werkzeug.pdf" title="WSGI, Werkseug And The Challenges Of Building A Web Framework - 2012 Python Miami Meetup">WSGI And Werkseug</a>
+      </nav>
+      <nav class="links small">
         <a href="http://gplus.to/igorgue" title="+Igor">+Igor</a>
         |
         <a href="http://twitter.com/igorgue" title="thoughts">Twitter</a>
@@ -85,8 +91,6 @@
         <a href="http://facebook.com/igorgue" title="drama">Facebook</a>
         |
         <a href="http://last.fm/user/igorgue" title="music">Last.fm</a>
-        |
-        <a href="http://www.google.com/reader/shared/igfgt1" title="shares">Reader</a>
         |
         <a href="http://stackoverflow.com/users/29253/igorgue" title="whut? and cause'">StackOverflow</a>
         |
